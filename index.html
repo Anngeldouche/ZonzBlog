@@ -3,51 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superposition d'Images</title>
+    <title>Site avec images comme boutons</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Pour centrer les images et avoir un peu d'espace */
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
         }
-        body, html {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background: black;
+
+        /* Positionner les images */
+        .image-container img {
+            width: 300px; /* Tu peux ajuster la taille comme tu veux */
+            margin: 20px;
+            cursor: pointer; /* Changer le curseur pour montrer que l'image est cliquable */
         }
-        .container {
+
+        /* Positionner les images comme tu veux */
+        #image1 {
             position: relative;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            left: 0; /* Position horizontale à changer selon ton besoin */
         }
-        .container img, .container a img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        /* Rendre ZazJeu cliquable */
-        .clickable {
-            cursor: pointer;
+
+        #image2 {
+            position: relative;
+            left: 50px; /* Position horizontale à changer selon ton besoin */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://raw.githubusercontent.com/Anngeldouche/ZonzBlog/main/Images/ZazBody%20.png" alt="ZazBody">
-        
-        <!-- ZazJeu devient un bouton cliquable -->
-        <a href="https://anngeldouche.github.io/StardewPotes/" target="_blank">
-            <img class="clickable" src="https://raw.githubusercontent.com/Anngeldouche/ZonzBlog/main/Images/ZazJeu.png" alt="ZazJeu">
+
+    <div class="image-container">
+        <!-- Image 1 avec le lien -->
+        <a href="https://www.site1.com" target="_blank">
+            <img id="image1" src="https://raw.githubusercontent.com/Anngeldouche/ZonzBlog/main/Images/ZazBody2.png" alt="Image 1">
         </a>
-        
-        <img src="https://raw.githubusercontent.com/Anngeldouche/ZonzBlog/main/Images/ZazMkp.png" alt="ZazMkp">
-        <img src="https://raw.githubusercontent.com/Anngeldouche/ZonzBlog/main/Images/ZazPhotos.png" alt="ZazPhotos">
-        <img src="https://raw.githubusercontent.com/Anngeldouche/ZonzBlog/main/Images/ZazVideos.png" alt="ZazVideos">
+        <!-- Image 2 avec le lien -->
+        <a href="https://www.site2.com" target="_blank">
+            <img id="image2" src="https://raw.githubusercontent.com/Anngeldouche/ZonzBlog/main/Images/ZazMkp2.png" alt="Image 2">
+        </a>
     </div>
+
 </body>
 </html>
