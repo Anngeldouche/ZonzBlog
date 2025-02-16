@@ -5,29 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site avec images comme boutons</title>
     <style>
-        /* Pour centrer les images et avoir un peu d'espace */
+        /* Pour centrer le contenu de l'écran */
         .image-container {
-            text-align: center;
-            margin-top: 0;
-            padding: 0;
-            height: 100vh; /* Utiliser toute la hauteur de l'écran */
             display: flex;
             justify-content: center; /* Centrer horizontalement */
             align-items: center; /* Centrer verticalement */
+            height: 100vh; /* Utiliser toute la hauteur de l'écran */
+            margin: 0;
         }
 
-        /* Positionner les images pour qu'elles remplissent l'écran */
+        /* Styles généraux pour les images */
         .image-container img {
-            width: 100%; /* Les images prendront toute la largeur de l'écran */
-            height: auto; /* Garder l'aspect ratio des images */
-            max-height: 100vh; /* Pour ne pas que l'image dépasse la hauteur de l'écran */
-            object-fit: cover; /* Pour s'assurer que l'image remplit bien sans déformer */
+            cursor: pointer; /* Afficher le curseur pointer quand on passe sur l'image */
+            object-fit: contain; /* Les images seront contenues sans déformation */
         }
 
-        /* Pour donner un petit espacement entre les images, tu peux ajuster si tu veux */
-        #image1, #image2 {
-            margin: 10px;
-            cursor: pointer; /* Changer le curseur pour montrer que l'image est cliquable */
+        /* Image 1 : Personnalisation facile */
+        #image1 {
+            width: 80%; /* Taille facile à modifier ici */
+            max-height: 80vh; /* Taille en hauteur limitée à 80% de la hauteur de l'écran */
+            margin-top: 20px; /* Décalage vers le bas de l'image */
+            margin-bottom: 20px; /* Décalage vers le bas de l'image */
+            position: relative;
+            left: 0; /* Décalage horizontal de l'image */
+            top: 0; /* Décalage vertical de l'image */
+        }
+
+        /* Image 2 : Personnalisation facile */
+        #image2 {
+            width: 70%; /* Taille facile à modifier ici */
+            max-height: 80vh; /* Taille en hauteur limitée à 80% de la hauteur de l'écran */
+            margin-top: 10px; /* Décalage vers le bas de l'image */
+            margin-bottom: 10px; /* Décalage vers le bas de l'image */
+            position: relative;
+            left: 0; /* Décalage horizontal de l'image */
+            top: 50px; /* Décalage vertical de l'image (par rapport à l'image 1) */
         }
 
     </style>
